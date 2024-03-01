@@ -1,0 +1,55 @@
+/* 侧边导航菜单 */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: absolute;
+    height: 100%;
+    float: left;
+  }
+  
+  /* 侧边栏链接 */
+  .sidebar ul {
+    padding-left: 0;
+  }
+  .sidebar li {
+    display: block;
+    color: black;
+    padding: 20px;
+    text-decoration: none;
+  }
+  
+  /* 活动/当前链接 */
+  .sidebar li.active {
+    background-color: #326f9b;
+    color: white;
+  }
+  
+  /* 鼠标悬停链接 */
+  .sidebar li:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+
+  
+  /* 在宽度小于 700px 的屏幕上，将侧边栏变成顶部栏 */
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* 在小于 400px 的屏幕上，垂直显示栏，而不是水平显示 */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+  

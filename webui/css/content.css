@@ -1,0 +1,5 @@
+/* 页面内容。 margin-left 属性的值应该与侧边栏的 width 属性的值匹配 */
+#content {
+  margin-left: 200px;
+}
+

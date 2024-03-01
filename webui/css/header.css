@@ -1,0 +1,19 @@
+.header {
+    height: 60px;
+    width: 100%;
+    background: blanchedalmond;
+    position: sticky;
+    top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    z-index: 10;
+}
+
+.webName {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: x-large;
+}
