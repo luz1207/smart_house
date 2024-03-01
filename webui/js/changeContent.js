@@ -21,8 +21,8 @@ $(function () {
         pathn = "./pose.html";
         i = 2;
         break;
-      case "#tod":
-        pathn = "./.html";
+      case "#face":
+        pathn = "./face.html";
         i = 3;
         break;
       case "#down":
