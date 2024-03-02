@@ -1,0 +1,56 @@
+.out_container{
+    background-color:rgb(171, 69, 69);
+    width: 800px;
+    height: 500px;
+    background-image: url('../resourse/face_background_out.jpg');
+}
+
+#box1{
+    display: flex;
+    flex-direction: row;
+}
+
+#video_player{
+    width: 350px;
+    height: 350px;
+    /* background-color:#f4f4f4; */
+    margin-left: 10px; 
+    margin-top: 20px;
+    text-align: center;
+}
+
+#result{
+    background-color:rgba(216, 207, 207, 0.662); 
+    width: 390px;
+    height: 350px;
+    margin: 20px;
+    
+}
+    
+.match_img{
+    width: 150px;
+    height: 210px;
+    background-color: rgba(230, 232, 234, 0.963);
+    margin: 15px;
+    text-align: center;
+    margin-left: 25px;
+    box-shadow: 3px 5px 5px rgb(198, 197, 197)
+}
+
+#info{
+    width: 350px;
+    height: 100px;
+    background-color:aliceblue;
+    margin-left: 15px;
+    border: 1px solid #b9beb9;
+    box-shadow: 3px 5px 5px rgb(198, 197, 197);
+    border-radius: 3%
+}
+
+#hint{
+    width: 780px;
+    height: 50px;
+    background-color:rgba(223, 227, 227, 0.224);
+    margin: 5px;
+    border-radius: 4%
+}
