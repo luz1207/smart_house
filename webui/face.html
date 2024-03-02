@@ -3,8 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <title></title>
+    <link rel="stylesheet" href="./css/face_recognize.css">
   </head>
   <body>
-    <div>人脸识别</div>
+    <div class="out_container">
+      <div id="box1">
+          <div id="video_player" >
+              <!-- <img src="./resourse/recognize_icon.png" style="width: 100px;height: 80px;margin-top: 2px;opacity: 0.97"> -->
+              <p style="color: aliceblue;">
+                  <font size="4" >人脸识别</font>
+              </p>
+              <video width="340" height="200" style="opacity: 1;" controls>
+                  <source src="./resourse/by_video1.mp4" type="video/mp4">
+              </video>
+          </div>
+          <div id="result">
+              <div id="match_result" style="display: flex;flex-direction: row;">
+                  <div class="match_img">
+                      <img src="./resourse/chenshi.png" style="height: 140px;width: 110px;border-radius: 4%;margin: 20px;margin-bottom: 1px">
+                      <b>
+                          <font size="2">匹配人脸</font>
+                      </b>
+                  </div>
+                  <canvas id="circle" height="132px" width="132px" style="margin: 20px;margin-left: 40px">
+                  </canvas>
+              </div>
+              <div id="info">
+                  <p style="margin-left: 20px;margin-right: 15px">
+                      姓名：
+                  </p>
+                  <p style="margin-left: 20px;margin-right: 15px">
+                      姓别：
+                  </p>
+              </div>
+          </div>
+      </div>
+      <div id="hint">
+          <p style="text-align: center;color:aliceblue">
+              <font size="5">正在验证</font>
+          </p>
+      </div>
+  </div>
   </body>
+  
+  <script type="text/javascript" src="./js/face_recognize.js">
+  </script>
 </html>
