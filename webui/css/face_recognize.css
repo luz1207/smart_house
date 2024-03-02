@@ -1,35 +1,39 @@
 .out_container{
-    background-color:rgb(171, 69, 69);
-    width: 800px;
-    height: 500px;
-    background-image: url('../resourse/face_background_out.jpg');
+    /* background-color:rgb(171, 69, 69); */
+    width: 100%;
+    height: 100%;
+    /* background-image: url('../resourse/face_background_out.jpg'); */
 }
 
 #box1{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    height: 80%;
+    /* background-color: aqua; */
 }
 
 #video_player{
-    width: 350px;
-    height: 350px;
+    width: 50%;
+    height: 50%;
     /* background-color:#f4f4f4; */
     margin-left: 10px; 
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center;
 }
 
 #result{
     background-color:rgba(216, 207, 207, 0.662); 
-    width: 390px;
-    height: 350px;
-    margin: 20px;
-    
+    width: 45%;
+    height:100%;
+    margin-top: 10px;
+    margin-left: 20px;
+    box-shadow: 3px 5px 5px rgb(198, 197, 197)
 }
     
 .match_img{
-    width: 150px;
-    height: 210px;
+    width: 30%;
+    height: 40%;
     background-color: rgba(230, 232, 234, 0.963);
     margin: 15px;
     text-align: center;
@@ -38,19 +42,22 @@
 }
 
 #info{
-    width: 350px;
-    height: 100px;
+    width: 95%;
+    height: 55%;
     background-color:aliceblue;
-    margin-left: 15px;
+    margin-left: 10px;
+    margin-bottom: 5px;
     border: 1px solid #b9beb9;
     box-shadow: 3px 5px 5px rgb(198, 197, 197);
     border-radius: 3%
 }
 
 #hint{
-    width: 780px;
-    height: 50px;
-    background-color:rgba(223, 227, 227, 0.224);
-    margin: 5px;
-    border-radius: 4%
+    width: 100%;
+    height: 20%;
+    /* background-color:rgba(16, 200, 200, 0.961); */
+    margin-top: 5px;
+    /* border-radius: 4%; */
+    background-image: url('../resourse/quote-bg-v3.jpg');
+    background-size: 100%;
 }
