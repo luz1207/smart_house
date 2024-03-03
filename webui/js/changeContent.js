@@ -9,28 +9,24 @@ $(function () {
     var sId = window.location.hash;
     var pathn, i;
     switch (sId) {
-      case "#home":
-        pathn = "./home.html";
-        i = 0;
-        break;
       case "#guesture":
         pathn = "./guesture.html";
-        i = 1;
+        i = 0;
         break;
       case "#pose":
         pathn = "./pose.html";
-        i = 2;
+        i = 1;
         break;
       case "#face":
         pathn = "./face.html";
-        i = 3;
+        i = 2;
         break;
       case "#down":
         pathn = "./down.html";
-        i = 4;
+        i = 3;
         break;
       default:
-        pathn = "./home.html";
+        pathn = "./guesture.html";
         i = 0;
         break;
     }
