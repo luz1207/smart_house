@@ -1,55 +1,57 @@
 /* 侧边导航菜单 */
 .sidebar {
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-    position: absolute;
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 15vw;
+  background-color: #b9e8ff;
+  position: absolute;
+  height: 85%;
+  float: left;
+}
+
+/* 侧边栏链接 */
+.sidebar ul {
+  margin-top: 0;
+  padding-left: 0;
+  background-color: #BEF8FF;
+}
+.sidebar li {
+  display: block;
+  color: black;
+  padding: 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* 活动/当前链接 */
+.sidebar li.active {
+  background-color: #16848e;
+  color: rgb(230, 239, 216);
+}
+
+/* 鼠标悬停链接 */
+.sidebar li:hover:not(.active) {
+  background-color: #5F757F;
+  color: white;
+}
+
+/* @media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
     float: left;
   }
-  
-  /* 侧边栏链接 */
-  .sidebar ul {
-    padding-left: 0;
+  div.content {
+    margin-left: 0;
   }
-  .sidebar li {
-    display: block;
-    color: black;
-    padding: 20px;
-    text-decoration: none;
-  }
-  
-  /* 活动/当前链接 */
-  .sidebar li.active {
-    background-color: #326f9b;
-    color: white;
-  }
-  
-  /* 鼠标悬停链接 */
-  .sidebar li:hover:not(.active) {
-    background-color: #555;
-    color: white;
-  }
-  
+}
 
-  
-  /* 在宽度小于 700px 的屏幕上，将侧边栏变成顶部栏 */
-  @media screen and (max-width: 700px) {
-    .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-    .sidebar a {float: left;}
-    div.content {margin-left: 0;}
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
   }
-  
-  /* 在小于 400px 的屏幕上，垂直显示栏，而不是水平显示 */
-  @media screen and (max-width: 400px) {
-    .sidebar a {
-      text-align: center;
-      float: none;
-    }
-  }
-  
+} */

@@ -3,8 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <title></title>
+    <link rel="stylesheet" href="./css/guesture.css">
   </head>
   <body>
-    <div>手势识别</div>
+    <div class="guesture">
+      <div class="guestureVideo">
+        手势检测
+        <img src="http://127.0.0.1:5000/video_feed"></img>
+      </div>
+      <div class="guestureBox2">
+        <div class="guestureResult">
+          <p style="text-align: center;">识别结果</p>
+          <img src="./resourse/hand_test.jpg" height="60%" width="60%" alt="识别结果">
+        </div>
+        <div class="lightList" >
+          <p style="text-align: center;">家具列表</p>
+          <ul>
+            <li>
+              <img src="./resourse/light.jpg" alt="灯1">
+              <div>
+                <p>L1</p>
+              </div>
+            </li>
+            <li>
+              <img src="./resourse/light.jpg" alt="灯2">
+              <p>L2</p>
+            </li>
+            <li>
+              <img src="./resourse/light.jpg" alt="灯3">
+              <p>L3</p>
+            </li>
+            <li>
+              <img src="./resourse/light.jpg" alt="灯4">
+              <p>L4</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
