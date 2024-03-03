@@ -1,0 +1,52 @@
+.guesture {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.guesture .guestureVideo {
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 80vh;
+  width: 70%;
+}
+.guesture .guestureBox2 {
+  height: 100%;
+  width: 30%;
+}
+.guesture .guestureResult {
+  height: 30%;
+  width: 100%;
+}
+.guesture .guestureResult img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.guesture .lightList {
+  height: 70%;
+  width: 100%;
+}
+.guesture .lightList ul {
+  height: 35vh;
+  /*设置在竖直方向上可滚动*/
+  overflow-y: scroll;
+}
+.guesture .lightList li {
+  padding: 10px;
+  list-style-type: none;
+  border: 1px solid #a3e5ff;
+  box-sizing: border-box;
+  background-color: rgb(220, 255, 255);
+}
+
+.guesture .lightList li img {
+  height: 80%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.guesture .lightList li p {
+  text-align: center;
+}
