@@ -1,6 +1,11 @@
+// 定义一些变量
+var name = '未知';//匹配到人脸的名字，未检测成功显示未知
+var gender = '未知';//匹配到人脸的性别
+var recognize_status = '正在验证';
 var percent = 80;
-// 1.canvas实现
+
 circle()
+//实现画出圆形匹配度功能
 function circle() {
     var canvas = document.getElementById('circle');
     var ctx = canvas.getContext("2d");
@@ -65,4 +70,22 @@ function drawCircle(circleObj) {
     //给环着色
     ctx.stroke();
     ctx.closePath();
+}
+
+//获取当前时间
+const divObj=document.getElementsByClassName('show_time')[0];
+    setInterval(()=>{
+        const nowTime=getNowTime();
+        divObj.innerText=nowTime;
+    })
+
+function getNowTime(){
+    const date=new Date();
+    const year=date.getFullYear();
+    const month=date.getMonth()+1;
+    const day=date.getDate();
+    const hour=date.getHours();
+    const minite=date.getMinutes();
+    const seconds=date.getSeconds();
+    return `${year}-${month}-${day} ${hour}:${minite}:${seconds<10?'0'+seconds:seconds}`
 }
