@@ -1,0 +1,120 @@
+.out_container{
+    display: flex;
+    flex-direction: column;
+    width: 84vw;
+    height: 100vh;
+    background-image: url('../resourse/blog-left-dec.jpg');
+    /* background-color: brown; */
+}
+#box1{
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    height: 80vh;
+    /* background-color: rgb(82, 192, 173); */
+}
+
+#video_player{
+    width: 30vw;
+    height: 60vh;
+    /* background-color:#f4f4f4; */
+    margin-left: 10px; 
+    margin-top: 10px;
+    text-align: center;
+}
+
+.vedeo_detect_show{
+    width: 20vw;
+    height: 60vh;
+    /* background-color:#f4f4f4; */
+    margin-left: 10px; 
+    margin-top: 10px;
+    text-align: center;
+}
+
+.result{
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    height: 80vh;
+    margin: 10px;
+    background-color: rgba(204, 226, 248, 0.155);
+    border-width: 2px;
+    border-color: black;
+    border-radius: 5%;
+    box-shadow: 3px 5px 5px rgb(198, 197, 197)
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    /* border-width: 1px;
+    border-style: solid;
+    border-color:rgba(221, 190, 223, 0.379) ;
+    border-radius: 3%;
+    box-shadow: 2px 2px 3px rgb(198, 197, 197); */
+    margin-left: 20px;
+    margin-right: 10px;
+    width: 30vw;
+}
+
+.result_text{
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+
+}
+
+.data table{
+    width:80%;
+    margin:10px 0;
+    border:0;
+}
+
+.data th {
+    background-color:#00A5FF;
+    color:#FFFFFF
+}
+
+.data,.data th,.data td {
+	font-size:0.95em;
+	text-align:center;
+	padding:6px;
+	border-collapse:collapse;
+}
+
+.data th,.data td {
+	border: 1px solid #cff8fe;
+	border-width:1px 0 1px 0
+}
+
+.data tr {
+	border: 1px solid #c1e9fe;
+}
+.data tr:nth-child(odd){
+	background-color:#dbf2fe;
+}
+.data tr:nth-child(even){
+	background-color:#fdfdfd;
+}
+
+.hint{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-left: 10px;
+    border: #0c0d0e7a;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15%;
+    width: 90%;
+    height: 15vh;
+    box-shadow: 3px 5px 5px rgb(198, 197, 197);
+}
+
+.text_hint{
+    padding: 10px;
+    max-width: 100%;
+    line-height: 1.5;
+    
+  }

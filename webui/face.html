@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
+    <!-- <meta charset="UTF-8" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <link rel="stylesheet" href="./css/face_recognize.css">
   </head>
@@ -10,9 +11,9 @@
       <div id="box1">
           <div id="video_player" >
               <!-- <img src="./resourse/recognize_icon.png" style="width: 100px;height: 80px;margin-top: 2px;opacity: 0.97"> -->
-              <p style="color: aliceblue;">
+              <!-- <p style="color: aliceblue;">
                   <font size="4" >人脸识别</font>
-              </p>
+              </p> -->
               <!-- <video width="340" height="200" style="opacity: 1;" controls>
                   <source src="./resourse/by_video1.mp4" type="video/mp4">
               </video> -->
@@ -22,28 +23,31 @@
           <div id="result">
               <div id="match_result" style="display: flex;flex-direction: row;">
                   <div class="match_img">
-                      <img src="./resourse/chenshi.png" style="height: 140px;width: 110px;border-radius: 4%;margin: 20px;margin-bottom: 1px">
+                      <img src="./resourse/chenshi.png" style="height: 140px;width: 110px;border-radius: 4%;margin: 10px;margin-bottom: 1px">
                       <b>
                           <font size="2">匹配人脸</font>
                       </b>
                   </div>
-                  <canvas id="circle" height="132px" width="132px" style="margin: 20px;margin-left: 40px">
+                  <canvas id="circle" height="132px" width="132px" style="margin: 20px;margin-left: 20px">
                   </canvas>
               </div>
               <div id="info">
-                  <p style="margin-left: 20px;margin-right: 15px">
-                      姓名：
+                  <p style="margin-left: 20px;margin-right: 15px;margin-top: 0;margin-bottom: 2">
+                      <font size="2">姓名：</font>
                   </p>
-                  <p style="margin-left: 20px;margin-right: 15px">
-                      姓别：
+                  <p style="margin-left: 20px;margin-right: 15px;margin-top: 0;margin-bottom: 2">
+                    <font size="2">性别：</font>
                   </p>
+                  <p style="margin-left: 20px;margin-right: 15px;margin-top: 0;margin-bottom: 2;float: left">
+                    <font size="2">时间：</font>
+                  </p>
+                  <div class="show_time"></div>
               </div>
           </div>
       </div>
-      <div id="hint">
-          <p style="text-align: center;color:aliceblue">
-              <font size="5">正在验证</font>
-          </p>
+      <div class="hint">
+          <span>正在验证</span>
+
       </div>
   </div>
   </body>

@@ -8,12 +8,16 @@
     margin-right: 0;
     margin-bottom: 0;
     z-index: 10;
+    background-image: url('../resourse/contact-top-right.png');
+    background-size: 100%;
 }
 
 .webName {
     position: absolute;
     top: 50%;
+    width: 100%;
     right: 10px;
     transform: translateY(-50%);
     font-size: x-large;
+    text-align: center;
 }
