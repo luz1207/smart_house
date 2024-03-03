@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
+    <!-- <meta charset="UTF-8" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
+    <link rel="stylesheet" href="./css/pose.css">
   </head>
   <body>
-    <div>
-        姿态矫正
+    <div class="out_container">
+      <div id="box1">
+        <div id="video_player">
+            <video style="height: 100%;width: 100%" controls>
+                <source src="./resourse/pose_real.mp4" type="video/mp4">
+            </video>
+            <p>人体姿态检测</p>
+        </div>
+        <div class="result">
+          <div class="vedeo_detect_show">
+            <video style="height: 50%;width: 100%" controls>
+              <source src="./resourse/pose.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="info">
+            <div class="result_text">
+              检测结果:
+            </div>
+            <table class="data">
+              <tr>
+                <th>&nbsp;</th>
+                <th>数据</th>
+              </tr>
+              <tr>
+                <td>人数</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>帧数</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>坐姿情况</td>
+                <td>良好</td>
+              </tr>
+              <tr>
+                <td>目标位置</td>
+                <td>(100,100,100)</td>
+              </tr>
+            </table>
+            <div class="hint">
+              <img src="./resourse/doctor.png" style="width: 20%;height: 80%;margin: 7px">
+              <p style="text-align: center;margin-top: 20px;margin-left: 16px">目前状态良好</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </body>
 </html>

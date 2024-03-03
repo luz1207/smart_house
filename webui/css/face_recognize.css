@@ -28,7 +28,7 @@
     height:100%;
     margin-top: 10px;
     margin-left: 20px;
-    box-shadow: 3px 5px 5px rgb(198, 197, 197)
+    box-shadow: 2px 3px 5px rgb(198, 197, 197)
 }
     
 .match_img{
@@ -52,12 +52,21 @@
     border-radius: 3%
 }
 
-#hint{
-    width: 100%;
-    height: 20%;
+.hint{
+    width: 80vw;
+    height: 18vh;
     /* background-color:rgba(16, 200, 200, 0.961); */
-    margin-top: 5px;
+    margin-top: 15px;
+    /* margin-top: 5px; */
     /* border-radius: 4%; */
-    background-image: url('../resourse/quote-bg-v3.jpg');
-    background-size: 100%;
+    text-align: center;
+    background-image: url('../resourse/contact-bottom-right.png');
+    background-size: 100% 100%;
+}
+
+
+.hint span{
+    font-size: x-large;
+    vertical-align: middle;
+    line-height: 100px;
 }

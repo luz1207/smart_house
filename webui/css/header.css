@@ -1,6 +1,6 @@
 .header {
     height: 60px;
-    width: 100%;
+    width: 100vw;
     /* background: blanchedalmond; */
     position: sticky;
     top: 0;
