@@ -52,7 +52,7 @@
     border-radius: 3%
 }
 
-.hint{
+.hint_face{
     width: 80vw;
     height: 18vh;
     /* background-color:rgba(16, 200, 200, 0.961); */
@@ -65,7 +65,7 @@
 }
 
 
-.hint span{
+.hint_face span{
     font-size: x-large;
     vertical-align: middle;
     line-height: 100px;

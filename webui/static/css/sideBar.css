@@ -5,7 +5,7 @@
   background-image: url('../resourse/slider-left-dec.jpg');
   background-size: 100%;
   width: 15vw;
-  background-color: #b9e8ff;
+  /* background-color: #b9e8ff00; */
   position: absolute;
   height: 85%;
   float: left;
@@ -15,7 +15,7 @@
 .sidebar ul {
   margin-top: 0;
   padding-left: 0;
-  background-color: #BEF8FF;
+  /* background-color: #BEF8FF; */
 }
 .sidebar li {
   display: block;

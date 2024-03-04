@@ -10,19 +10,19 @@ $(function () {
     var pathn, i;
     switch (sId) {
       case "#guesture":
-        pathn = "./guesture.html";
+        pathn = "../static/guesture.html";
         i = 0;
         break;
       case "#pose":
-        pathn = "./pose.html";
+        pathn = "../static/pose.html";
         i = 1;
         break;
       case "#face":
-        pathn = "./face.html";
+        pathn = "../static/face.html";
         i = 2;
         break;
       case "#down":
-        pathn = "./down.html";
+        pathn = "../static/down.html";
         i = 3;
         break;
       default:
