@@ -14,10 +14,10 @@
 }
 
 #video_player{
-    width: 50%;
+    width:40%;
     height: 50%;
     /* background-color:#f4f4f4; */
-    margin-left: 10px; 
+    /* margin-left: 5px;  */
     margin-top: 10px;
     text-align: center;
 }
