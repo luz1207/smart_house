@@ -1,8 +1,9 @@
 import cv2
-import time
 import json
 import base64
 from flask import Flask
+import mediapipe as mp
+from application.model import gesTure
 from flask import render_template
 from flask import Flask, render_template, Response
 from flask import Flask, request, jsonify
@@ -31,7 +32,7 @@ def read_usb_capture():
         yield  (b'--frame\r\n'
                 b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
     
-frame_interval=0.1   
+# frame_interval=0.001    
 def detect_faces():  
     ret, frame = camera1.read()
     if not ret:
@@ -57,16 +58,19 @@ def detect_faces():
 
         resp = client.DetectFace(req)
         json_data = resp.to_json_string()
-        
         #将图像中的人脸标出来
-        face_num = len(json_data)
-        if face_num == 1:
-            image_w = json_data["ImageWidth"]
-            image_h = json_data["ImageHeight"] 
-            x = json_data["FaceInfos"]["X"]
-            y = json_data["FaceInfos"]["Y"]
-            width = json_data["FaceInfos"]["Width"]
-            height = json_data["FaceInfos"]["Height"]
+        # face_num = len(json_data)
+        face_info_list = json.loads(json_data)["FaceInfos"]
+        face_num = len(face_info_list)    
+        data = json.loads(json_data)
+        
+        for i in range(face_num):
+            image_w = data["ImageWidth"]
+            image_h = data["ImageHeight"] 
+            x = data["FaceInfos"][i]["X"]
+            y = data["FaceInfos"][i]["Y"]
+            width = data["FaceInfos"][i]["Width"]
+            height = data["FaceInfos"][i]["Height"]
             if x + width >=image_w :
                 W = image_w
             else:
@@ -86,17 +90,21 @@ def detect_faces():
             }
 
             # 将数据转换为 JSON 格式的字符串
-            json_response = json.dumps(response_data)
+        json_response = json.dumps(response_data)
 
-            yield f"data: {json_response}\n\n"
-            
+        return f"data: {json_response}\n\n"
+    
 
         # yield f"data: {json_data}\n\n"
 
     except TencentCloudSDKException as err:
         print(err)
         
-    time.sleep(frame_interval)
+    # time.sleep(frame_interval)
+
+def gesture_recognition():
+    x= gesTure()
+    return x.Control()
 
 @app.route('/')
 def index():
@@ -104,7 +112,7 @@ def index():
 
 @app.route('/video_feed0')
 def video_feed0():
-    return Response(read_usb_capture(),mimetype='multipart/x-mixed-replace; boundary=frame')
+    return Response(gesture_recognition(),mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @app.route('/detect_face')
 def detect_face():

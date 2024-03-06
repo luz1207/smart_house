@@ -94,6 +94,7 @@ function getNowTime(){
 
 // 获取用于显示结果的容器
 const faceResultContainer = document.getElementById('faceResult');
+const imageElement = document.getElementById("face_image")
 
 // 创建一个 EventSource 对象连接到服务器端的 /detect_face 路由
 const eventSource = new EventSource('/detect_face');
@@ -101,10 +102,15 @@ const eventSource = new EventSource('/detect_face');
 // 当收到来自服务器端的消息时，更新页面上的人脸检测结果
 eventSource.onmessage = function(event) {
     const jsonData = JSON.parse(event.data);
+
+    // 显示图像
+    imageElement.src = 'data:image/jpeg;base64,' + jsonData.image;
+
+    const face_json_data = JSON.parse(jsonData["data_info"])
     // 在这里可以根据需要处理人脸识别结果并更新页面内容
     // 这里简单地将识别到的人脸信息显示在页面上
     const faceInfoElement = document.createElement('pre');
-    faceInfoElement.textContent = JSON.stringify(jsonData, null, 2); // 使用 JSON.stringify 将 JSON 数据格式化并转换为字符串
+    faceInfoElement.textContent = JSON.stringify(face_json_data["FaceInfos"], null, 2); // 使用 JSON.stringify 将 JSON 数据格式化并转换为字符串
     faceResultContainer.innerHTML = ''; // 清空人脸检测结果容器
     faceResultContainer.appendChild(faceInfoElement); // 将格式化后的 JSON 字符串添加到人脸检测结果容器中
 };
